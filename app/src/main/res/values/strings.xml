@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TimeTracker</string>
+    <string name="editar">Editar</string>
+    <string name="borrar">Eliminar</string>
+</resources>

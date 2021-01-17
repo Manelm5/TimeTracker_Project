@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/popup"
+    tools:context=".PopUpProyectoActivity"
+    android:orientation="vertical"
+    android:id="@+id/relativeLayout3">
+
+
+    <ImageButton
+        android:id="@+id/closebutton"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="25dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_action_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="160dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="25dp"
+        android:text="Crear Informe"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/subtitulo1"
+        android:layout_width="346dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="Tipo de informe:"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo" />
+
+    <!-- Dropdown text !-->
+
+    <Spinner
+        android:id="@+id/tipusinformes"
+        android:layout_width="wrap_content"
+        android:layout_height="41dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:entries="@array/informes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subtitulo1" />
+
+
+    <!-- Final of the dropdown text !-->
+
+    <TextView
+        android:id="@+id/subtitulo2"
+        android:layout_width="364dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Inicio del periodo:"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tipusinformes" />
+
+    <DatePicker
+        android:id="@+id/plain_text_iniciar_periodo"
+        android:layout_width="260dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:inputType="date"
+        android:hint="DD/MM/YYYY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subtitulo2"
+        android:datePickerMode="spinner"
+        android:calendarViewShown="false"
+        android:scaleX="0.9"
+        android:scaleY="0.9"
+
+        />
+
+
+    <TextView
+        android:id="@+id/subtitulo3"
+        android:layout_width="324dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Final del periodo:"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/plain_text_iniciar_periodo" />
+
+    <DatePicker
+        android:id="@+id/plain_text_finalizar_periodo"
+        android:layout_width="260dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:ems="15"
+        android:inputType="date"
+        android:hint="DD/MM/YYYY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subtitulo3"
+        android:datePickerMode="spinner"
+        android:calendarViewShown="false"
+        android:scaleX="0.9"
+        android:scaleY="0.9"
+        />
+
+    <TextView
+        android:id="@+id/subtitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Formato:"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/plain_text_finalizar_periodo" />
+
+    <Spinner
+        android:id="@+id/tipusformat"
+        android:layout_width="wrap_content"
+        android:layout_height="41dp"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:entries="@array/format"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subtitulo" />
+
+    <Button
+        android:id="@+id/generarinforme_button"
+        android:layout_width="231dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="76dp"
+        android:layout_marginStart="77dp"
+        android:layout_marginTop="20dp"
+        android:text="GENERAR INFORME"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tipusformat" />
+
+
+
+</android.support.constraint.ConstraintLayout>

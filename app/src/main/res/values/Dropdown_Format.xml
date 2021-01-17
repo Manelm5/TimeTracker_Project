@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <string-array name="format">
+            <item>HTML</item>
+            <item>Texto</item>
+        </string-array>
+</resources>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.example.joans.timetracker.LlistaActivitatsActivity"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/listViewActivitats"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:headerDividersEnabled="true"
+            android:background="@color/colorPrimary"
+            tools:listitem="@android:layout/simple_list_item_2">
+
+        </ListView>
+
+    </LinearLayout>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/menuPrincipal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingEnd="8dp"
+        android:paddingBottom="8dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/menuTarea"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="clickCrearTarea"
+            app:fab_colorNormal="#FFFF"
+            app:fab_colorPressed="#A5A6A6"
+            app:fab_label="Añadir Tarea"
+            android:src="@drawable/ic_task" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/menuProyecto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="clickCrearProyecto"
+            app:fab_label="Añadir Proyecto"
+            app:fab_colorNormal="#FFFF"
+            app:fab_colorPressed="#A5A6A6"
+            android:src="@drawable/ic_project" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/menuInforme"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="clickCrearInfome"
+            app:fab_label="Crear Informe"
+            app:fab_colorNormal="#FFFF"
+            app:fab_colorPressed="#A5A6A6"
+            android:src="@drawable/ic_infom" />
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+</RelativeLayout>
